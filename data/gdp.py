@@ -14,7 +14,7 @@ import warnings
 
 def parse_directory_file(filename: str) -> pd.DataFrame:
     """
-    Read a directory file
+    Read a directory file which contains metadata of drifters release
 
     Note: due to naming of those files, it requires manual intervention to update the last file name after an update of the dataset
 
@@ -27,6 +27,7 @@ def parse_directory_file(filename: str) -> pd.DataFrame:
     aoml_dirfl_url = "https://www.aoml.noaa.gov/ftp/pub/phod/buoydata/"
 
     df = pd.read_csv(join(aoml_dirfl_url, filename), delimiter="\s+", header=None)
+    # combine the date and time columns to easily parse dates below
     df[4] += " " + df[5]
     df[8] += " " + df[9]
     df[12] += " " + df[13]
