@@ -2,18 +2,16 @@ name: clouddrift-examples
 channels:
   - conda-forge
 dependencies:
-  - python>=3.9
-  - numpy>=1.21.6
-  - xarray>=2022.6.0
-  - netcdf4>=1.6.1
-  - pyarrow>=9.0.0
-  - tqdm>=4.64.1
-  - fsspec>=2022.8.2
-  - llvmlite>=0.38.1
-  - pandas>=1.4.4
-  - tqdm>=4.64.1
-  - matplotlib>=3.6.2
-  - pip>=22.2.2
-  - pip:
-    - awkward>=2.0.0
-    - git+https://github.com/Cloud-Drift/clouddrift.git
+  - python=3.10
+  - clouddrift
+  - numpy
+  - xarray
+  - awkward
+  - netcdf4
+  - pyarrow
+  - tqdm
+  - fsspec
+  - llvmlite
+  - pandas
+  - tqdm
+  - matplotlib
